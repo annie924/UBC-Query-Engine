@@ -1,46 +1,69 @@
-# CPSC 310 Project Repository
+# InsightUBC Query Engine & Dataset Manager
 
-This repository contains starter code for the class project.
-Please keep your repository private.
+This project is an extension of the UBC CPSC 310 "InsightUBC" system. It allows users to upload, manage, and query datasets about UBC course sections and campus rooms through a REST API and a frontend interface.
 
-For information about the project, autotest, and the checkpoints, see the course webpage.
+## 🚀 Features
 
-## Configuring your environment
+- Upload and remove datasets (Sections and Rooms) via API
+- Execute powerful queries on datasets with filtering, grouping, sorting, and aggregation
+- Persist datasets to disk between server restarts
+- User-friendly frontend to visualize and interact with data
+- Support for geolocation-based room mapping (via provided API)
 
-To start using this project, you need to get your development environment configured so that you can build and execute the code.
-To do this, follow these steps; the specifics of each step will vary based on your operating system:
+---
 
-1. [Install git](https://git-scm.com/downloads) (v2.X). You should be able to execute `git --version` on the command line after installation is complete.
+## 📁 Dataset Types
 
-1. [Install Node (Current)](https://nodejs.org/en/download/) (Current: v23.X), which will also install NPM (you should be able to execute `node --version` and `npm --version` on the command line).
+### 1. Sections Dataset
+Standard dataset in JSON format that contains UBC course section data.
 
-1. [Install Yarn](https://yarnpkg.com/en/docs/install) (1.22.X). You should be able to execute `yarn --version`.
+### 2. Rooms Dataset
+HTML-based dataset with building and room details. Geolocation is fetched using:
+See full [Room Specification](https://sites.google.com/view/ubccpsc310-24w2/project/room-specification) :contentReference[oaicite:0]{index=0}.
 
-1. Clone your repository by running `git clone REPO_URL` from the command line. You can get the REPO_URL by clicking on the green button on your project repository page on GitHub. Note that due to new department changes you can no longer access private git resources using https and a username and password. You will need to use either [an access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) or [SSH](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
+---
 
-## Project commands
+## 📦 API Endpoints
 
-Once your environment is configured you need to further prepare the project's tooling and dependencies.
-In the project folder:
+| Method | Endpoint                     | Description                          |
+|--------|------------------------------|--------------------------------------|
+| PUT    | `/dataset/:id/:kind`         | Add a dataset (`sections` or `rooms`) |
+| DELETE | `/dataset/:id`               | Remove a dataset                     |
+| GET    | `/datasets`                  | List all datasets                    |
+| POST   | `/query`                     | Perform a query                      |
 
-1. `yarn install` to download the packages specified in your project's *package.json* to the *node_modules* directory.
+Responses follow the specification defined in `IInsightFacade.ts`.
 
-1. `yarn build` to compile your project. You must run this command after making changes to your TypeScript files. If it does not build locally, AutoTest will not be able to build it. This will also run formatting and linting, so make sure to fix those errors too!
+---
 
-1. `yarn test` to run the test suite.
-    - To run with coverage, run `yarn cover`
+## 🔍 Query Language
 
-1. `yarn prettier:fix` to format your project code.
+Queries follow a custom EBNF format with support for:
 
-1. `yarn lint:check` to see lint errors in your project code. You may be able to fix some of them using the `yarn lint:fix` command.
+- `WHERE` filters (e.g., GT, EQ, IS)
+- `TRANSFORMATIONS`:
+  - `GROUP`: Define keys to group results
+  - `APPLY`: Aggregations (AVG, SUM, MIN, MAX, COUNT)
+- `OPTIONS`:
+  - `COLUMNS`: Select fields or apply keys
+  - `ORDER`: Single or multi-key directional sorting
 
-
-If you are curious, some of these commands are actually shortcuts defined in [package.json -> scripts](./package.json).
-
-## Running and testing from an IDE
-
-IntelliJ Ultimate should be automatically configured the first time you open the project (IntelliJ Ultimate is a free download through the [JetBrains student program](https://www.jetbrains.com/community/education/#students/)).
-
-### License
-
-While the readings for this course are licensed using [CC-by-SA](https://creativecommons.org/licenses/by-sa/3.0/), **checkpoint descriptions and implementations are considered private materials**. Please do not post or share your project solutions. We go to considerable lengths to make the project an interesting and useful learning experience for this course. This is a great deal of work, and while future students may be tempted by your solutions, posting them does not do them any real favours. Please be considerate with these private materials and not pass them along to others, make your repos public, or post them to other sites online.
+**Example aggregation query:**
+```json
+{
+  "WHERE": {
+    "GT": {
+      "rooms_seats": 300
+    }
+  },
+  "OPTIONS": {
+    "COLUMNS": ["rooms_shortname", "maxSeats"],
+    "ORDER": { "dir": "DOWN", "keys": ["maxSeats"] }
+  },
+  "TRANSFORMATIONS": {
+    "GROUP": ["rooms_shortname"],
+    "APPLY": [
+      { "maxSeats": { "MAX": "rooms_seats" } }
+    ]
+  }
+}
