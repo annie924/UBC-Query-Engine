@@ -1,0 +1,33 @@
+{
+	"title": "valid query with Sum",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": 97
+			}
+		},
+
+		"OPTIONS": {
+			"COLUMNS": ["sections_title", "overallPass"],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"sections_title"
+				]
+			}
+		},
+
+		"TRANSFORMATIONS": {
+			"GROUP": ["sections_title"],
+
+			"APPLY": [{
+				"overallPass": {
+					"SUM": "sections_pass"
+				}
+			}]
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"sections_title":"acad assess schl","overallPass":26},{"sections_title":"algb geometry i","overallPass":42},{"sections_title":"algb topology i","overallPass":18},{"sections_title":"assess lrn diffi","overallPass":72},{"sections_title":"career planning","overallPass":46},{"sections_title":"cl pro prim care","overallPass":56},{"sections_title":"coll&uni teachng","overallPass":9},{"sections_title":"cor des ed res","overallPass":22},{"sections_title":"dev el sk df&hrd","overallPass":22},{"sections_title":"diff geometry i","overallPass":8},{"sections_title":"educ stds autism","overallPass":124},{"sections_title":"eth&profl issues","overallPass":24},{"sections_title":"fam nrs pract","overallPass":90},{"sections_title":"harmonic anal i","overallPass":22},{"sections_title":"multimedia sys","overallPass":24},{"sections_title":"res mthd in educ","overallPass":14},{"sections_title":"sem in autism","overallPass":16},{"sections_title":"thesis","overallPass":2},{"sections_title":"work int health","overallPass":164}]
+}
+

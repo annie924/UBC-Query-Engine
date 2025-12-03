@@ -1,0 +1,36 @@
+{
+	"title": "valid query with Count",
+	"input": {
+		"WHERE": {
+			"GT": {
+				"sections_avg": 97
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_title",
+				"countSection"
+			],
+			"ORDER": {
+				"dir": "UP",
+				"keys": [
+					"sections_title"
+				]
+			}
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"sections_title"
+			],
+			"APPLY": [
+				{
+					"countSection": {
+						"COUNT": "sections_uuid"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"expected":[{"sections_title":"acad assess schl","countSection":2},{"sections_title":"algb geometry i","countSection":2},{"sections_title":"algb topology i","countSection":2},{"sections_title":"assess lrn diffi","countSection":5},{"sections_title":"career planning","countSection":3},{"sections_title":"cl pro prim care","countSection":4},{"sections_title":"coll&uni teachng","countSection":1},{"sections_title":"cor des ed res","countSection":2},{"sections_title":"dev el sk df&hrd","countSection":2},{"sections_title":"diff geometry i","countSection":2},{"sections_title":"educ stds autism","countSection":6},{"sections_title":"eth&profl issues","countSection":2},{"sections_title":"fam nrs pract","countSection":6},{"sections_title":"harmonic anal i","countSection":2},{"sections_title":"multimedia sys","countSection":2},{"sections_title":"res mthd in educ","countSection":1},{"sections_title":"sem in autism","countSection":1},{"sections_title":"thesis","countSection":2},{"sections_title":"work int health","countSection":2}]
+}

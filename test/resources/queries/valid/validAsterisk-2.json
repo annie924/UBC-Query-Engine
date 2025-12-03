@@ -1,0 +1,521 @@
+{
+	"title": "Valid use of asterisk both",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"EQ": {
+						"sections_fail": 5
+					}
+				},
+				{
+					"IS": {
+						"sections_dept": "*sc*"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_fail"
+			],
+			"ORDER": "sections_dept"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "apsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "cpsc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "eosc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "musc",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "scan",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "scan",
+				"sections_fail": 5
+			},
+			{
+				"sections_dept": "scie",
+				"sections_fail": 5
+			}
+		]
+	}

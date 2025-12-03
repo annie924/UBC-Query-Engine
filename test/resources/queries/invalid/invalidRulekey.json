@@ -1,0 +1,22 @@
+{
+	"title": "Invalid rule key",
+	"input": {
+		"WHERE": {},
+
+		"OPTIONS": {
+			"COLUMNS": ["sections_title", "overallAvg"]
+		},
+
+		"TRANSFORMATIONS": {
+			"GROUP": ["sections_title"],
+
+			"APPLY": [{
+				"overallAvg": {
+					"AVG": "sections_"
+				}
+			}]
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

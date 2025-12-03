@@ -1,0 +1,23 @@
+{
+	"title": "Invalid use of NOT",
+	"input": {
+		"WHERE": {
+			"NOT": [
+				{
+					"GT": {
+						"sections_avg": 97
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

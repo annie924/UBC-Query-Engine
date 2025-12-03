@@ -1,0 +1,28 @@
+{
+	"title": "Valid use of asterisk ends",
+	"input": {
+		"WHERE": {
+			"AND": [
+				{
+					"GT":{
+						"sections_avg":80
+					}
+				},
+				{
+					"IS": {
+						"sections_dept": "*ds"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [{"sections_dept":"ends","sections_avg":80.12},{"sections_dept":"ends","sections_avg":80.12},{"sections_dept":"ends","sections_avg":80.21},{"sections_dept":"ends","sections_avg":80.21},{"sections_dept":"ends","sections_avg":80.41},{"sections_dept":"ends","sections_avg":80.41},{"sections_dept":"ends","sections_avg":80.43},{"sections_dept":"ends","sections_avg":80.43},{"sections_dept":"ends","sections_avg":80.45},{"sections_dept":"ends","sections_avg":80.45},{"sections_dept":"ends","sections_avg":80.8},{"sections_dept":"ends","sections_avg":80.8},{"sections_dept":"ends","sections_avg":80.89},{"sections_dept":"ends","sections_avg":80.89},{"sections_dept":"ends","sections_avg":80.93},{"sections_dept":"ends","sections_avg":80.93},{"sections_dept":"ends","sections_avg":81.1},{"sections_dept":"ends","sections_avg":81.1},{"sections_dept":"ends","sections_avg":81.13},{"sections_dept":"ends","sections_avg":81.13},{"sections_dept":"ends","sections_avg":81.16},{"sections_dept":"ends","sections_avg":81.16},{"sections_dept":"ends","sections_avg":81.23},{"sections_dept":"ends","sections_avg":81.23},{"sections_dept":"ends","sections_avg":81.36},{"sections_dept":"ends","sections_avg":81.36},{"sections_dept":"ends","sections_avg":81.36},{"sections_dept":"ends","sections_avg":81.36},{"sections_dept":"ends","sections_avg":81.64},{"sections_dept":"ends","sections_avg":81.64},{"sections_dept":"ends","sections_avg":81.71},{"sections_dept":"ends","sections_avg":81.71},{"sections_dept":"ends","sections_avg":82.03},{"sections_dept":"ends","sections_avg":82.03},{"sections_dept":"ends","sections_avg":82.04},{"sections_dept":"ends","sections_avg":82.04},{"sections_dept":"ends","sections_avg":82.45},{"sections_dept":"ends","sections_avg":82.45},{"sections_dept":"ends","sections_avg":82.47},{"sections_dept":"ends","sections_avg":82.47},{"sections_dept":"ends","sections_avg":82.5},{"sections_dept":"ends","sections_avg":82.5},{"sections_dept":"ends","sections_avg":82.53},{"sections_dept":"ends","sections_avg":82.53},{"sections_dept":"ends","sections_avg":82.65},{"sections_dept":"ends","sections_avg":82.65},{"sections_dept":"ends","sections_avg":82.68},{"sections_dept":"ends","sections_avg":82.68},{"sections_dept":"ends","sections_avg":83.38},{"sections_dept":"ends","sections_avg":83.38},{"sections_dept":"ends","sections_avg":83.41},{"sections_dept":"ends","sections_avg":83.41},{"sections_dept":"ends","sections_avg":83.52},{"sections_dept":"ends","sections_avg":83.52},{"sections_dept":"ends","sections_avg":83.67},{"sections_dept":"ends","sections_avg":83.67},{"sections_dept":"ends","sections_avg":83.69},{"sections_dept":"ends","sections_avg":83.69},{"sections_dept":"ends","sections_avg":83.73},{"sections_dept":"ends","sections_avg":83.73},{"sections_dept":"ends","sections_avg":83.77},{"sections_dept":"ends","sections_avg":83.77},{"sections_dept":"ends","sections_avg":84},{"sections_dept":"ends","sections_avg":84},{"sections_dept":"ends","sections_avg":84},{"sections_dept":"ends","sections_avg":84},{"sections_dept":"ends","sections_avg":84.1},{"sections_dept":"ends","sections_avg":84.1},{"sections_dept":"ends","sections_avg":84.19},{"sections_dept":"ends","sections_avg":84.19},{"sections_dept":"ends","sections_avg":84.44},{"sections_dept":"ends","sections_avg":84.44},{"sections_dept":"ends","sections_avg":84.69},{"sections_dept":"ends","sections_avg":84.69},{"sections_dept":"ends","sections_avg":84.85},{"sections_dept":"ends","sections_avg":84.85},{"sections_dept":"ends","sections_avg":85.39},{"sections_dept":"ends","sections_avg":85.39},{"sections_dept":"ends","sections_avg":85.64},{"sections_dept":"ends","sections_avg":85.64},{"sections_dept":"ends","sections_avg":85.8},{"sections_dept":"ends","sections_avg":85.8},{"sections_dept":"ends","sections_avg":87.17},{"sections_dept":"ends","sections_avg":87.17}]
+}
